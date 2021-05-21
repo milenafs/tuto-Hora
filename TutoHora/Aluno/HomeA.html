@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="utf-8">
+  <meta content="width=device-width, initial-scale=1.0" name="viewport">
+  <title>Home - TutoHora</title>
+  <meta content="" name="description">
+  <meta content="" name="keywords">
+  <!-- Favicons -->
+  <link href="../assets/img/Logo_TutoHora.png" rel="icon">
+  <link href="../assets/img/Logo_TutoHora.png" rel="LogoTutoHora">
+  <!-- Google Fonts -->
+  <link
+    href="https://fonts.googleapis.com/css?family=Open+Sans:300,300i,400,400i,600,600i,700,700i|Raleway:300,300i,400,400i,500,500i,600,600i,700,700i|Poppins:300,300i,400,400i,500,500i,600,600i,700,700i"
+    rel="stylesheet">
+  <!-- Vendor CSS Files -->
+  <link href="../assets/vendor/animate.css/animate.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="../assets/vendor/bootstrap-icons/bootstrap-icons.css" rel="stylesheet">
+  <link href="../assets/vendor/boxicons/css/boxicons.min.css" rel="stylesheet">
+  <link href="../assets/vendor/glightbox/css/glightbox.min.css" rel="stylesheet">
+  <link href="../assets/vendor/swiper/swiper-bundle.min.css" rel="stylesheet">
+  <!-- Template Main CSS File -->
+  <link href="../assets/css/estilo.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.11.2/css/all.css" />
+</head>
+
+<body>
+  <div id="mySidenav" class="sidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <img id="logo_menu" src="../assets/img/Logo-TutoHora-unscreen.gif">
+    <a href="#">Início</a>
+    <a href="MeusHorariosA.html">Meus Horários</a>
+    <a href="Professores.html">Professores</a><br><br>
+    <button type="button" class="btnSair"> Sair </button>
+  </div>
+  <!-- ======= Header ======= -->
+  <header id="header" class="d-flex align-items-center">
+    <div class="container d-flex align-items-center">
+      <span id="menu" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776;</span>
+      <h1 class="logo me-auto"> TutoHora</h1>
+      <h5 id="nome-profile">User01</h5>
+      <div id="profile-container">
+
+        <img id="image-profile" src="../assets/img/1.jpg">
+      </div>
+    </div>
+  </header>
+  <!-- End Header -->
+
+  <!-- =======  MAIN ======= -->
+  <table id="tabelaInicio">
+    <tr>
+      <td width="500"> 
+        <br>
+        <!--  Desabilita botão ID  não pode mudar  disabled=""-->
+        <i class="fas fa-user" style="color: #D4DBFE;"> </i> Nome:<input class="inputHome"  type="text" id="txtUser" name="usuario" style="font-family: cursive;" maxlength="50" value="" />
+       <br> <input type="hidden" name="idUserLogado" id="idUserLogado" value="">
+       <br> 
+       <i class="fas fa-phone" style="color: #D4DBFE;"></i> Telefone: <input class="inputHome"  type="text"  id="idUsuario" name="idUsuario" value=""/>
+       <div style="margin-top: -20px;height: 20;position: absolute;width:752px;z-index: 1;"></div><br> <!-- -->
+       <br> 
+       <i class="fas fa-envelope" style="color: #D4DBFE;"> </i> E-mail:<input class="inputHome"  type="email" id="txtEmail" name="email"  maxlength="150" value=""/>
+       <br> 
+       <br> 
+       <i class="fas fa-lock" style="color: #D4DBFE;"> </i> Senha:
+       <input class="inputHome"  type="password" maxlength="10" value="" id="senha" name="senha">
+       <img id="olho" height="20px" width="20px" src="https://image.flaticon.com/icons/png/512/37/37090.png">
+       <input class="btnHome" id="AtualizarInfoPessoal" type="submit" value="Atualizar dados" />
+      </td>
+     <td width="400">
+       <p style="text-align: center;">Mude sua foto aqui: 
+        <input class="inputHome" type='text' name="urlFoto" placeholder="Coloque o url da imagem escolhida aqui." id="teste" value=""></p>
+        <img id="fotoUser" width="200" height="200"  src='../assets/img/perfil.png' />
+      <br>
+      <br>
+      <input class="btnFotoHome" id='selecao-arquivo2' type="button" value="Veja como ficou &#187;">
+      </td>
+    </tr>
+  </table>
+
+  <script>
+    function openNav() {
+      document.getElementById("mySidenav").style.width = "250px";
+    }
+
+    function closeNav() {
+      document.getElementById("mySidenav").style.width = "0";
+    }
+  </script>
+  <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js"
+    integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo"
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
+    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
+    crossorigin="anonymous"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
+    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
+    crossorigin="anonymous"></script>
+</body>
+
+</html>

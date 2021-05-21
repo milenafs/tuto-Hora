@@ -1,0 +1,184 @@
+/*
+Parte de aluno e menu ao lado
+#000000  - preto
+#818AE7 - azul escuro
+#D4DBFE - azul mais claro
+#EF7F59 - laranjinha
+#FBBE63 - amarelinho
+*/
+body {
+    font-family: "Lato", sans-serif;
+    /*background-image: url(https://i.pinimg.com/originals/a5/43/21/a54321b862c07dd25971d7782c0e547c.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;*/
+    background-color:#fbfbfa ;
+  }
+  
+  .sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    background-color:#f6f7fa;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+  }
+  
+  .sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #0f0d0d;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .sidenav a:hover {
+    color: #818AE7;
+  }
+  
+  .sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+  }
+  
+@media screen and (max-height: 450px) 
+{
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+}
+.btnSair{
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 5px;
+  width: 50%;
+  margin-left: 25%;
+  transition: all 0.2s;
+  background-color: #818AE7;
+  border:#818AE7;
+}
+
+#menu{
+  margin-left: -100px;
+  margin-right: 20px;
+ 
+}
+
+/*************************************************************/
+#profile-container{
+    margin-top:50px;
+}
+
+#image-profile{
+    border-radius: 50px;
+    height: 100px;
+    width: 100px;
+    margin-left: 90%;
+}
+
+#nome-profile{
+    font-size: 20px;
+    margin-top: 30px;
+    /*background-color: #818AE7;*/
+    margin-right: -60px;
+    color:black;
+}
+#logo_menu{
+    width: 160px;
+    height: 160px;
+    margin-left: 18%;
+}
+/*--------------------------------------------------------------
+# Header
+--------------------------------------------------------------*/
+#header {
+  background: #fff;
+  transition: all 0.5s;
+  z-index: 997;
+  height: 70px;
+  background-color:rgb(255, 255, 255);
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.014);
+}
+
+#header.header-scrolled {
+  box-shadow: 0px 2px 15px rgba(0, 0, 0, 0.123);
+}
+
+#header .logo {
+  font-size: 30px;
+  margin: 0;
+  padding: 0;
+  line-height: 1;
+  font-weight: 700;
+  letter-spacing: 1px;
+  text-transform: uppercase; 
+  color: #818AE7;
+}
+
+#header .logo img {
+  max-height: 40px;
+}
+
+.scrolled-offset {
+  margin-top: 70px;
+}
+/**********************************************/
+/*Home
+
+*/
+table, th, td {
+  
+/*border: 0.5px solid #FBBE63 ;*/
+  font-size: 20px;
+  margin-top: 50px;
+  margin-left: 40px;
+  width: 1300px;
+}
+.inputHome
+{
+  width: 400px;
+  height:30px;
+  font-size: medium;
+  font-family: "Lato", sans-serif;
+}
+.btnHome
+{
+  font-size: 100%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 5px;
+  width: 60%;
+  margin-left: 20%;
+  transition: all 0.2s;
+  background-color: #818AE7;
+  border:#818AE7;
+  margin-top: 60px;
+}
+.btnFotoHome{
+  font-size: 60%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  padding: 5px;
+  width: 30%;
+  margin-left: 30%;
+  transition: all 0.2s;
+  background-color: #818AE7;
+  border:#818AE7;
+ 
+}
+#fotoUser
+{
+  border-radius: 100%;
+  height: 200px;
+  width: 200px;
+  margin-left: 200px;
+}
