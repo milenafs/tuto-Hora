@@ -1,12 +1,15 @@
 import React from 'react';
-import PaginaPrincipal from './components/PaginaPrincipal';
-import Carrossel from './components/Carrossel';
+//import PaginaPrincipal from './components/PaginaPrincipal';
+//import Carrossel from './components/Carrossel';
+import HomeAluno from './components/HomeAluno';
+import Menu from './components/Menu';
 //import CriarConta from './components/CriarConta';
-//import Login from './components/Login';
+//import Login from './components/Login'; 
+       
 function App() {
   return (
     <div>
-        <PaginaPrincipal/>
+        <HomeAluno></HomeAluno>
     </div>
   );
 }

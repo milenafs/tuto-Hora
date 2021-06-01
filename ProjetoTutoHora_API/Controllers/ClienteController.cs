@@ -20,8 +20,8 @@ namespace ProjetoTutoHora_API.Controllers
             _context = context;
         }
         [HttpGet]
-        public ActionResult<List<Clientes>> GetAll() {
-            return _context.Clientes.ToList();
+        public ActionResult<List<Cliente>> GetAll() {
+            return _context.Cliente.ToList();
         }
     }
 }

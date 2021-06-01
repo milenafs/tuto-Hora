@@ -1,6 +1,6 @@
 namespace ProjetoTutoHora_API.Models
 {
-    public class Clientes
+    public class Cliente
     {
         public int idCliente { get; set; }
         public string nome { get; set; }

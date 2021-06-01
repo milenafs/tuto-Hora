@@ -11,7 +11,7 @@ body {
     /*background-image: url(https://i.pinimg.com/originals/a5/43/21/a54321b862c07dd25971d7782c0e547c.jpg);
     background-repeat: no-repeat;
     background-size: cover;*/
-    background-color:#fbfbfa ;
+    background-color: #fbfbfa ;
   }
   
   .sidenav {
@@ -21,7 +21,7 @@ body {
     z-index: 2;
     top: 0;
     left: 0;
-    background-color:#f6f7fa;
+    background-color: #fbfbfa ;
     overflow-x: hidden;
     transition: 0.5s;
     padding-top: 60px;
@@ -81,15 +81,15 @@ body {
     border-radius: 50px;
     height: 100px;
     width: 100px;
-    margin-left: 90%;
+    margin-left: 35px;
 }
 
 #nome-profile{
     font-size: 20px;
     margin-top: 30px;
-    /*background-color: #818AE7;*/
-    margin-right: -60px;
-    color:black;
+    color: #818AE7;
+    margin-left: 850px;
+    /*color:black;*/
 }
 #logo_menu{
     width: 160px;
@@ -100,12 +100,12 @@ body {
 # Header
 --------------------------------------------------------------*/
 #header {
-  background: #fff;
+  
   transition: all 0.5s;
   z-index: 997;
   height: 70px;
-  background-color:rgb(255, 255, 255);
-  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.014);
+  background-color:#e9eef8b0 ;
+  box-shadow: 5px 5px 5px rgba(0, 0, 0, 0.055);
 }
 
 #header.header-scrolled {

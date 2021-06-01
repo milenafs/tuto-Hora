@@ -21,7 +21,7 @@ namespace ProjetoTutoHora_API.Controllers
         }
         [HttpGet]
         public ActionResult<List<Professor>> GetAll() {
-            return _context.Professor.ToList();
+            return _context.Professores.ToList();
         }
     }
 }
