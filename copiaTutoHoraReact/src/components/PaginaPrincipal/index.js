@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import "../../assets/css/style.css";
+import '../PaginaPrincipal/stylePaginaPrincipal.css'
 import fotoEscola from '../../assets/img/about.jpg';
 import prof1 from '../../assets/img/professores/1.jpg';
 import prof2 from '../../assets/img/professores/2.jpg';
@@ -13,11 +13,12 @@ import fotoGi from '../../assets/img/perfil.png';
 import fotoIsa from '../../assets/img/perfil.png';
 import fotoLena from '../../assets/img/perfil.png';
 import Carrossel from '../Carrossel'
+import { Link } from 'react-router-dom';
 
 export default class PaginaPrincipal extends Component {
     render() {
         return (
-            <div>            
+            <div id="bodyPrincipal">            
                <section id="topbar" className="d-flex align-items-center">
                     <div className="container d-flex justify-content-center justify-content-md-between">
                         <div className="contact-info d-flex align-items-center">
@@ -42,16 +43,18 @@ export default class PaginaPrincipal extends Component {
                                 <li><a style={{textDecoration:"none"}} className="nav-link scrollto " href="#portfolio">Professores</a></li>
                                 <li><a style={{textDecoration:"none"}} className="nav-link scrollto" href="#team">Criadoras</a></li>
                                 <li><a style={{textDecoration:"none"}} className="nav-link scrollto" href="#contact">Contatos</a></li>
-                                <li><a style={{textDecoration:"none"}} className="getstarted scrollto" href="Login/Login.html">Entrar</a></li>
+                                <Link to="/login">
+                                    <li><a style={{textDecoration:"none"}} className="getstarted scrollto">Entrar</a></li>
+                                </Link>
                             </ul>
                             <i className="bi bi-list mobile-nav-toggle"></i>
                         </nav>
                     </div>
                 </div>
-                <section>
+                <section style={{marginBottom:"-60px", marginTop:"-10px"}}>
                     <Carrossel/>
                 </section>
-                <main id="main">
+                <main id="main" >
                     <section id="featured-services" className="featured-services section-bg">
                         <div className="container">
                             <div className="row no-gutters">
@@ -220,7 +223,9 @@ export default class PaginaPrincipal extends Component {
                                     <h3>Quer saber quais outras matérias nós temos?</h3>
                                 </div>
                                 <div className="col-lg-3 cta-btn-container text-center">
-                                    <a style={{textDecoration:"none"}} className="cta-btn align-middle" href="Criar_Codastro/index.html">Quero me inscrever!</a>
+                                    <Link to="/criarConta">
+                                        <a style={{textDecoration:"none"}} className="cta-btn align-middle">Quero me inscrever!</a>
+                                    </Link>
                                 </div>
                             </div>
 

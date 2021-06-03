@@ -1,0 +1,60 @@
+@import url("https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css");
+@import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css");
+@import url("../CalendarioAgendamento/styleCalendarioAgendamento.css");
+
+:root{
+    --azulescuro: #818AE7;
+    --azulclaro:#D4DBFE;
+    --laranja:#EF7F59;
+    --amarelo:#ffd089 ;
+}
+
+body, #bodyAulasAluno{
+    background-color: rgb(248, 255, 255);
+}
+
+.mes-container{
+    width: 80%;
+    margin: auto;
+}
+
+.fc-state-active{
+    background-color:var(--azulclaro);
+}
+
+.fc-day-grid-event{
+    background-color:#8189e79f;
+    border: none;
+}
+.fc-day-number{
+    color: var(--azulescuro);
+}
+.fc-unthemed td.fc-today{
+    background-color: #eef1fd;
+}
+
+
+
+.agenda-btn{
+     background-color:#d4dbfeb2 ;
+     color: #818AE7;
+     padding: 10px;
+     font-size: 10px;
+     font-weight: 700;
+     letter-spacing: 1px;
+    border-radius: 20px;
+    width: 100px;
+     transition: .5s ease;
+ }
+ .agenda-btn:hover{
+    box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.096);
+    letter-spacing: 3px;
+ }
+ .agenda-btn:active{
+     background-color: #c6cefa;
+ }
+
+ .fc-toolbar, .fc-header-toolbar{
+     overflow: hidden;
+     height: 0;
+ }

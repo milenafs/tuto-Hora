@@ -1,15 +1,18 @@
 /*
 CSS da parte da página inicial (antes do login)
 */
-
 /*--------------------------------------------------------------
 # General
 --------------------------------------------------------------*/
 body {
   font-family: "Open Sans", sans-serif;
   color: #444444;
+  
 }
-
+#bodyPrincipal
+{
+  background-color: rgb(255, 255, 255);
+}
 a {
   text-decoration: none;
   color: #818AE7;
@@ -1147,9 +1150,29 @@ section {
   padding: 30px;
   background: #fff;
   width: 100%;
+  
   box-shadow: 0 0 24px 0 rgba(0, 0, 0, 0.12);
 }
-
+#btnSalvarHome{
+  margin-top: 20px;
+  background: #818AE7;
+  border: 0;
+  padding: 15px 24px;
+  width: 150px;
+  color: #fff;  
+  transition: 0.4s;
+  border-radius: 4px;
+  font-size: 20px;
+}
+#btnVerImg
+{
+  background: #8189e7a9;
+  border: 0;
+  padding: 10px 24px;
+  color: #fff;
+  transition: 0.4s;
+  border-radius: 4px;
+}
 .contact .info i {
   font-size: 20px;
   color: #818AE7;

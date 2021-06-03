@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
-import "./homeAluno.css";
+import "./homeProf.css";
 import fotoPerfil from "../../assets/img/perfil.png";
-import Menu from '../MenuAluno';
+import Menu from '../MenuProf';
 
-export default class HomeAluno extends Component {
+export default class HomeProf extends Component {
     render() {
         return (
-            <div id="corpo">
+            <div id="corpoProf">
                 <Menu></Menu>
                 <section id="contact" className="contact">
                     <div className="container">
@@ -16,10 +16,10 @@ export default class HomeAluno extends Component {
                         <div className="row">
                             <div className="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch">
                                 <form action="forms/contact.php" method="post" className="php-email-form">
-                                    <div className="form-group mt-3">
+                                    
                                         <label>Nome:</label>
                                         <input type="text" name="nome" className="form-control" id="nome" required />
-                                    </div>
+                                   
                                     <div className="row">
                                         <div className="form-group col-md-6">
                                             <label>Senha:</label>
@@ -30,20 +30,24 @@ export default class HomeAluno extends Component {
                                             <input type="email" className="form-control" name="email" id="email" required />
                                         </div>
                                     </div>
-                                    <div className="form-group mt-3">
-                                        <label>Telefone:</label>
-                                        <input type="tel" name="tel" className="form-control" id="tel" required />
+                                    <div className="row">
+                                        <div className="form-group col-md-6">
+                                            <label>Telefone:</label>
+                                            <input type="tel" name="tel" className="form-control" id="tel" required />
+                                        </div>
+                                        <div className="form-group col-md-6 mt-3 mt-md-0">
+                                            <label>Idade:</label>
+                                            <input type="number" name="idade" className="form-control" id="idade" required />
+                                        </div>
                                     </div>
-                                    {/*
-                                            <div class="form-group mt-3">
-                                                <label for="name">Subject</label>
-                                                <input type="text" className="form-control" name="subject" id="subject" required />
-                                            </div>
-                                            <div class="form-group mt-3">
-                                                <label for="name">Message</label>
-                                                <textarea class="form-control" name="message" rows="10" required></textarea>
-                                            </div>
-                                        */}
+                                    
+                                        <label for="name">Formação:</label>
+                                        <input type="text" className="form-control" name="subject" id="subject" required />
+                                    
+                                    
+                                        <label for="name">Metodologia:</label>
+                                        <textarea class="form-control" name="message" rows="4" required></textarea>
+                                    
                                     <div className="my-3">
                                         <div className="loading">Carregando.</div>
                                         <div className="error-message"></div>
@@ -61,6 +65,12 @@ export default class HomeAluno extends Component {
                                         <img id="fotoUser" alt="" src={fotoPerfil} />
                                     </div>
                                     <div className="text-center" ><button id="btnVerImg" type="submit"> Visualizar </button></div>
+                                    <br></br><br></br>
+                                    <div className="mx-auto0">
+                                        <i class="fas fa-chalkboard-teacher" style={{marginLeft:"17%",marginRight:"15%"}}></i> 
+                                        <i class="fas fa-user-graduate"></i>
+                                        <i class="far fa-id-badge" style={{marginLeft:"15%",marginRight:"15%"}}></i>
+                                    </div>
                                 </div>
                             </div>
                             <div className="mx-auto">

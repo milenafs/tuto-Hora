@@ -1,9 +1,10 @@
 import React, { Component } from 'react';
-import "../../assets/css/style.css";
+import "./styleCarrosel.css";
 import TutoHora from "../../assets/img/slide/TutoHora.gif";
 import TutoHora2 from "../../assets/img/slide/TutoHora2.jpg";
 import TutoHora3 from "../../assets/img/slide/TutoHora3.jpg";
 import Carousel from 'react-bootstrap/Carousel'
+import { Link } from 'react-router-dom';
 
 export default class Carrossel extends Component {
     render() {
@@ -20,7 +21,9 @@ export default class Carrossel extends Component {
                             <div className="container" style={{color:"black",textAlign:"center", marginBottom: "100px"}}>
                                 <h2 className="animate__animated animate__fadeInDown">Bem vindo!</h2>
                                 <p className="animate__animated animate__fadeInUp">TutoHora é uma escola para todos que buscam <br /> aperfeiçoar ou aprender novas habilidades.</p>
-                                <a style={{textDecoration:"none"}} href="../CriarConta/index.html" className="btn-get-started animate__animated animate__fadeInUp scrollto">Quero me inscrever!</a>
+                                <Link to="/criarConta">
+                                    <a style={{textDecoration:"none"}} className="btn-get-started animate__animated animate__fadeInUp scrollto">Quero me inscrever!</a>
+                                </Link>
                             </div>
                         </Carousel.Caption>
                     </Carousel.Item>

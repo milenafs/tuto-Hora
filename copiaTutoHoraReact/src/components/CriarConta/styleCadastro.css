@@ -4,8 +4,7 @@
   }
   
   body {
-    background: #FBBE63;/*#007bff*/
-    background: linear-gradient(to right,#818AE7,#D4DBFE );/*#0062E6 #33AEFF*/
+    background: linear-gradient(to right,#818AE7 ,#D4DBFE );/*#0062E6 #33AEFF*/
   }
   
   .card-signin {
@@ -25,7 +24,7 @@
   .card-signin .card-img-left {
     width: 45%;
     /* Link to your background image using in the property below! */
-    background: scroll center url('../../assets/img/Login.png');
+    background: scroll center url('../../assets/img/criar\ Conta.png');
     background-size: cover;
   }
   

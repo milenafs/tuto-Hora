@@ -6,7 +6,7 @@ Parte de aluno e menu ao lado
 #EF7F59 - laranjinha
 #FBBE63 - amarelinho
 */
-body {
+body, #bodyMeuProf {
     font-family: "Lato", sans-serif;
     /*background-image: url(https://i.pinimg.com/originals/a5/43/21/a54321b862c07dd25971d7782c0e547c.jpg);
     background-repeat: no-repeat;
@@ -31,13 +31,14 @@ body {
     padding: 8px 8px 8px 32px;
     text-decoration: none;
     font-size: 25px;
-    color: #0f0d0d;
+    color:#0f0d0d;
     display: block;
     transition: 0.3s;
   }
   
-  .sidenav a:hover {
+  .sidenav a:hover, .opcaoMenu {
     color: #818AE7;
+    text-decoration: none;
   }
   
   .sidenav .closebtn {
@@ -175,10 +176,10 @@ table, th, td {
   border:#818AE7;
  
 }
-#fotoUser
+/*#fotoUser
 {
   border-radius: 100%;
   height: 200px;
   width: 200px;
   margin-left: 200px;
-}
+}*/

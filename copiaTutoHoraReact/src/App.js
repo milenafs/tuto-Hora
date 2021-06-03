@@ -1,16 +1,25 @@
 import React from 'react';
+import { BrowserRouter } from 'react-router-dom';
+import Rotas from './Rotas';
+/*
+import HomeAluno from './components/HomeAluno';
 //import PaginaPrincipal from './components/PaginaPrincipal';
 //import Carrossel from './components/Carrossel';
-import HomeAluno from './components/HomeAluno';
-import Menu from './components/Menu';
+//import HomeAluno from './components/HomeAluno';
+import HomeProf from './components/HomeProf';
+//import Menu from './components/Menu';
 //import CriarConta from './components/CriarConta';
 //import Login from './components/Login'; 
-       
+// <HomeAluno></HomeAluno> 
+*/
 function App() {
   return (
-    <div>
-        <HomeAluno></HomeAluno>
-    </div>
+    <BrowserRouter>
+      <div>
+        <Rotas></Rotas>
+      </div>
+    </BrowserRouter>
+
   );
 }
 

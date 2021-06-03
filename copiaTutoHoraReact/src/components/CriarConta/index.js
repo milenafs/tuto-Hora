@@ -1,5 +1,7 @@
 import React, { Component } from 'react';
-import "./style.css";
+import "./styleCadastro.css";
+import { Link } from 'react-router-dom';
+
 export default class CriarConta extends Component {
     render() {
         return (
@@ -39,11 +41,14 @@ export default class CriarConta extends Component {
 
 
                                     <button className="btn btn-lg btn-primary btn-block text-uppercase" type="submit">
-                                        Criar</button>
+                                        Criar
+                                    </button>
 
-                                    <a className="d-block text-center mt-2 small" href="../Login/Login.html">Já possui uma conta?
-								        Clique aqui
-                                    </a>
+                                    <Link to="/login">
+                                        <a className="d-block text-center mt-2 small">Já possui uma conta?
+                                            Clique aqui
+                                        </a>
+                                    </Link>
 
                                 </form>
                             </div>
