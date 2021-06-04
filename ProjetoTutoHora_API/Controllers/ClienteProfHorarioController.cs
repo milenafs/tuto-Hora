@@ -11,17 +11,17 @@ namespace ProjetoTutoHora_API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    public class ProfessorController : Controller
+    public class ClienteProfHorarioController : Controller
     {
         private readonly TutoHoraContext _context;
-        public ProfessorController(TutoHoraContext context)
+        public ClienteProfHorarioController(TutoHoraContext context)
         {
             // construtor
             _context = context;
         }
         [HttpGet]
-        public ActionResult<List<Professor>> GetAll() {
-            return _context.Professor.ToList();
+        public ActionResult<List<ClienteProfHorario>> GetAll() {
+            return _context.ClienteProfHorario.ToList();
         }
     }
 }

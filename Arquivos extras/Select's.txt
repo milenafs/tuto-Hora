@@ -1,0 +1,49 @@
+Página Principal:
+select nomeProf, foto from professor
+**************************************************
+Login Aluno: 
+select * from cliente where email = "?" and senha = "?"
+**************************************************
+Login Professor:
+select * from professor where email = "?" and senha = "?"
+**************************************************
+Home Aluno:
+SELECT * from cliente where nome = "?"
+**************************************************
+Home Professor:
+SELECT * from professor where nomeProf="?"
+**************************************************
+Professores:
+Select * from professor
+**************************************************
+Calendário Aulas Aluno:
+select c.nome, p.nomeProf, cph.dataAula, cph.link, cph.descrição, ph.horarioInicio, ph.horarioFinal from 
+Cliente c,
+professor p,
+clienteprofhorario cph,
+profhorario ph 
+where 
+c.id = ? and 
+c.id = cph.idCliente AND
+cph.idProfHorario = ph.id AND
+ph.idProf = p.id
+**************************************************
+Calendário Aulas Professores:
+select c.nome, p.nomeProf, cph.dataAula, cph.link, cph.descrição, ph.horarioInicio, ph.horarioFinal from 
+Cliente c,
+professor p,
+clienteprofhorario cph,
+profhorario ph 
+where 
+p.id = ? AND
+p.id = ph.idProf and 
+ph.id = cph.idProfHorario and 
+c.id = cph.idCliente 
+**************************************************
+Agendamento:
+select p.nomeProf, ph.diaSemana, ph.horarioInicio, ph.horarioFinal from
+Professor p,
+ProfHorario ph
+where
+p.id = ? and
+p.id = ph.idProf
