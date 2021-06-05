@@ -1,14 +1,14 @@
 import React, { Component } from 'react';
 import '../PaginaPrincipal/stylePaginaPrincipal.css'
 import fotoEscola from '../../assets/img/about.jpg';
-import prof1 from '../../assets/img/professores/1.jpg';
+/*import prof1 from '../../assets/img/professores/1.jpg';
 import prof2 from '../../assets/img/professores/2.jpg';
 import prof3 from '../../assets/img/professores/3.jpg';
 import prof4 from '../../assets/img/professores/4.jpg';
 import prof5 from '../../assets/img/professores/5.jpg';
 import prof6 from '../../assets/img/professores/6.jpg';
 import prof7 from '../../assets/img/professores/7.jpg';
-import prof8 from '../../assets/img/professores/8.jpg';
+import prof8 from '../../assets/img/professores/8.jpg';*/
 import fotoGi from '../../assets/img/perfil.png';
 import fotoIsa from '../../assets/img/perfil.png';
 import fotoLena from '../../assets/img/perfil.png';
@@ -16,43 +16,66 @@ import Carrossel from '../Carrossel'
 import { Link } from 'react-router-dom';
 
 export default class PaginaPrincipal extends Component {
+    constructor(props) {
+        super(props);
+        this.state = {
+            dadosProfs: []
+        };
+    }
+    componentDidMount() {
+        const apiUrl = 'https://localhost:5000/api/Professor';
+        fetch(apiUrl)
+            .then(res => res.json())
+            .then(
+                (result) => {
+                    this.setState({
+                        dadosProfs: result
+                    });
+                    console.log("buscaProfs:" + result);
+                },
+                (error) => {
+                    this.setState({ error });
+                }
+            )
+    }
     render() {
+        const { dadosProfs } = this.state;
         return (
-            <div id="bodyPrincipal">            
-               <section id="topbar" className="d-flex align-items-center">
+            <div id="bodyPrincipal">
+                <section id="topbar" className="d-flex align-items-center">
                     <div className="container d-flex justify-content-center justify-content-md-between">
                         <div className="contact-info d-flex align-items-center">
-                            <i class="fas fa-envelope"></i><a style={{textDecoration:"none"}}  href="mailto:tutohora@gmail.com">tutohora@gmail.com </a>
-                            <i class="fas fa-phone-alt" style={{marginLeft: "10px"}}></i> +11 5589 55488 55
+                            <i class="fas fa-envelope"></i><a style={{ textDecoration: "none" }} href="mailto:tutohora@gmail.com">tutohora@gmail.com </a>
+                            <i class="fas fa-phone-alt" style={{ marginLeft: "10px" }}></i> +11 5589 55488 55
                              </div>
-                             <div className="social-links d-none d-md-block">
-                                <a style={{textDecoration:"none"}} href="https://twitter.com/TutoHora?s=09" className="twitter"><i class="fab fa-twitter"></i></a>
-                                <a style={{textDecoration:"none"}} className="facebook"><i class="fab fa-facebook"></i></a>
-                                <a style={{textDecoration:"none"}} href="https://www.instagram.com/tutohora/" className="instagram"><i class="fab fa-instagram"></i></a>
-                            </div>
+                        <div className="social-links d-none d-md-block">
+                            <a style={{ textDecoration: "none" }} href="https://twitter.com/TutoHora?s=09" className="twitter"><i class="fab fa-twitter"></i></a>
+                            <a style={{ textDecoration: "none" }} className="facebook"><i class="fab fa-facebook"></i></a>
+                            <a style={{ textDecoration: "none" }} href="https://www.instagram.com/tutohora/" className="instagram"><i class="fab fa-instagram"></i></a>
+                        </div>
                     </div>
                 </section>
                 <div id="header" className="d-flex align-items-center" >
                     <div className="container d-flex align-items-center">
-                        <h1 className="logo me-auto"><a style={{textDecoration:"none", marginRight:"250px"}} href="index.html">TutoHora</a></h1>
+                        <h1 className="logo me-auto"><a style={{ textDecoration: "none", marginRight: "250px" }} href="index.html">TutoHora</a></h1>
                         <nav id="navbar" className="navbar">
                             <ul>
-                                <li><a style={{textDecoration:"none"}} className="nav-link scrollto active" href="#hero">Home</a></li>
-                                <li><a style={{textDecoration:"none"}} className="nav-link scrollto" href="#about">O Colégio</a></li>
-                                <li><a style={{textDecoration:"none"}} className="nav-link scrollto" href="#services">Matérias</a></li>
-                                <li><a style={{textDecoration:"none"}} className="nav-link scrollto " href="#portfolio">Professores</a></li>
-                                <li><a style={{textDecoration:"none"}} className="nav-link scrollto" href="#team">Criadoras</a></li>
-                                <li><a style={{textDecoration:"none"}} className="nav-link scrollto" href="#contact">Contatos</a></li>
+                                <li><a style={{ textDecoration: "none" }} className="nav-link scrollto active" href="#hero">Home</a></li>
+                                <li><a style={{ textDecoration: "none" }} className="nav-link scrollto" href="#about">O Colégio</a></li>
+                                <li><a style={{ textDecoration: "none" }} className="nav-link scrollto" href="#services">Matérias</a></li>
+                                <li><a style={{ textDecoration: "none" }} className="nav-link scrollto " href="#portfolio">Professores</a></li>
+                                <li><a style={{ textDecoration: "none" }} className="nav-link scrollto" href="#team">Criadoras</a></li>
+                                <li><a style={{ textDecoration: "none" }} className="nav-link scrollto" href="#contact">Contatos</a></li>
                                 <Link to="/login">
-                                    <li><a style={{textDecoration:"none"}} className="getstarted scrollto">Entrar</a></li>
+                                    <li><a style={{ textDecoration: "none" }} className="getstarted scrollto">Entrar</a></li>
                                 </Link>
                             </ul>
                             <i className="bi bi-list mobile-nav-toggle"></i>
                         </nav>
                     </div>
                 </div>
-                <section style={{marginBottom:"-60px", marginTop:"-10px"}}>
-                    <Carrossel/>
+                <section style={{ marginBottom: "-60px", marginTop: "-10px" }}>
+                    <Carrossel />
                 </section>
                 <main id="main" >
                     <section id="featured-services" className="featured-services section-bg">
@@ -61,21 +84,21 @@ export default class PaginaPrincipal extends Component {
                                 <div className="col-lg-4 col-md-6">
                                     <div className="icon-box">
                                         <div className="icon"><i class="far fa-calendar-alt"></i></div>
-                                        <h4 className="title"><a style={{textDecoration:"none"}} href="">Agendamento Personalizado</a></h4>
+                                        <h4 className="title"><a style={{ textDecoration: "none" }} href="">Agendamento Personalizado</a></h4>
                                         <p className="description">Agende um horário com um tutor de sua escolha no horário e dia que for melhor para você.</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="icon-box">
                                         <div className="icon"><i class="fas fa-laptop"></i></div>
-                                        <h4 className="title"><a style={{textDecoration:"none"}} href="">Aprenda de onde quiser</a></h4>
+                                        <h4 className="title"><a style={{ textDecoration: "none" }} href="">Aprenda de onde quiser</a></h4>
                                         <p className="description">Tenha atendimentos de professores renomados á distância sem sair de sua casa ou venha aprender na nossa sede</p>
                                     </div>
                                 </div>
                                 <div className="col-lg-4 col-md-6">
                                     <div className="icon-box">
                                         <div className="icon"><i class="fas fa-wallet"></i></div>
-                                        <h4 className="title">   <a style={{textDecoration:"none"}} href="">Baixo Custo</a></h4>
+                                        <h4 className="title">   <a style={{ textDecoration: "none" }} href="">Baixo Custo</a></h4>
                                         <p className="description">Não pesa no seu bolso, escolha os professores com os menores custos, e pague apenas pelas tutorias realizadas.</p>
                                     </div>
                                 </div>
@@ -129,7 +152,7 @@ export default class PaginaPrincipal extends Component {
                                                 </path>
                                             </svg>
                                             <i class="fas fa-futbol"></i>                                    </div>
-                                        <h4><a style={{textDecoration:"none"}} href="">Esportes</a></h4>
+                                        <h4><a style={{ textDecoration: "none" }} href="">Esportes</a></h4>
                                         <p>Temos tutorias de esportes como: Basquete, Volêi, Futebol, Natação, etc</p>
                                     </div>
                                 </div>
@@ -145,7 +168,7 @@ export default class PaginaPrincipal extends Component {
                                             </svg>
                                             <i className="fas fa-globe"></i>
                                         </div>
-                                        <h4><a style={{textDecoration:"none"}} href="">Humanas</a></h4>
+                                        <h4><a style={{ textDecoration: "none" }} href="">Humanas</a></h4>
                                         <p>Temos tutorias de humanas como: Geografia, História, Filosofia, Sociologia, etc.</p>
                                     </div>
                                 </div>
@@ -161,7 +184,7 @@ export default class PaginaPrincipal extends Component {
                                             </svg>
                                             <i className="fas fa-square-root-alt"></i>
                                         </div>
-                                        <h4><a style={{textDecoration:"none"}} href="">Exatas</a></h4>
+                                        <h4><a style={{ textDecoration: "none" }} href="">Exatas</a></h4>
                                         <p>Temos tutorias de exatas como: Matemática, Física, Raciocínio lógico, etc.</p>
                                     </div>
                                 </div>
@@ -176,7 +199,7 @@ export default class PaginaPrincipal extends Component {
                                             </svg>
                                             <i className="fas fa-seedling"></i>
                                         </div>
-                                        <h4><a style={{textDecoration:"none"}} href="">Biológicas</a></h4>
+                                        <h4><a style={{ textDecoration: "none" }} href="">Biológicas</a></h4>
                                         <p>Temos tutorias de biológicas como: Biologia, Neurociência, Primeiros socorros, etc.</p>
                                     </div>
                                 </div>
@@ -191,7 +214,7 @@ export default class PaginaPrincipal extends Component {
                                             </svg>
                                             <i className="fas fa-language"></i>
                                         </div>
-                                        <h4><a style={{textDecoration:"none"}} href="">Idiomas</a></h4>
+                                        <h4><a style={{ textDecoration: "none" }} href="">Idiomas</a></h4>
                                         <p>Temos tutorias de idiomas como: Inglês, Chinês, Japonês, Frânces, etc.</p>
                                     </div>
                                 </div>
@@ -206,7 +229,7 @@ export default class PaginaPrincipal extends Component {
                                             </svg>
                                             <i className="fas fa-star"></i>
                                         </div>
-                                        <h4><a style={{textDecoration:"none"}} href="">Especiais</a></h4>
+                                        <h4><a style={{ textDecoration: "none" }} href="">Especiais</a></h4>
                                         <p>Temos tutorias especiais como: Pintura, Programação, Xadrez, Yoga, Canto, etc.</p>
                                     </div>
                                 </div>
@@ -224,7 +247,7 @@ export default class PaginaPrincipal extends Component {
                                 </div>
                                 <div className="col-lg-3 cta-btn-container text-center">
                                     <Link to="/criarConta">
-                                        <a style={{textDecoration:"none"}} className="cta-btn align-middle">Quero me inscrever!</a>
+                                        <a style={{ textDecoration: "none" }} className="cta-btn align-middle">Quero me inscrever!</a>
                                     </Link>
                                 </div>
                             </div>
@@ -233,24 +256,28 @@ export default class PaginaPrincipal extends Component {
                     </section>
                     <section id="portfolio" className="portfolio">
                         <div className="container">
-
                             <div className="section-title">
                                 <h2>Professores</h2>
                                 <p>Venha conhecer nossos professores cadastrados!</p>
                             </div>
                             <div className="row portfolio-container">
 
-                                <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-                                    <div className="portfolio-wrap">
-                                        <img src={prof1} className="img-fluid" alt="" height="300px" width="400px" />
-                                        <div className="portfolio-info">
-                                            <h4>Maria Antonieta</h4>
-                                            <p>Formada em Biologia e Química na UNICAMP</p>
+                                {dadosProfs.map(
+                                    (prof) =>
+                                        <div className="col-lg-4 col-md-6 portfolio-item filter-app">
+                                            <div className="portfolio-wrap">
+                                                <img className="img-fluid" alt="" 
+                                                src={prof.foto}> 
+                                                </img>
+                                                <div className="portfolio-info">
+                                                    <h4>{prof.nomeProf}</h4>
+                                                    <p>{prof.formação}</p>
+                                                </div>
+                                            </div>
                                         </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item filter-web">
+                                )}
+                            
+                                {/*<div className="col-lg-4 col-md-6 portfolio-item filter-web">
                                     <div className="portfolio-wrap">
                                         <img src={prof2} className="img-fluid" alt="" height="300px" width="400px" />
                                         <div className="portfolio-info">
@@ -318,7 +345,7 @@ export default class PaginaPrincipal extends Component {
                                             <p>Formada em Ciências Humanas na Usp</p>
                                         </div>
                                     </div>
-                                </div>
+                                </div>*/}
                             </div>
                         </div>
                     </section>
@@ -337,10 +364,10 @@ export default class PaginaPrincipal extends Component {
                                         <h4>Giovana Mendonça Zambanini</h4>
                                         <span>COO</span>
                                         <div className="social">
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-twitter"></i></a>
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-facebook"></i></a>
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-instagram"></i></a>
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-linkedin"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-twitter"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-facebook"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-instagram"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-linkedin"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -351,10 +378,10 @@ export default class PaginaPrincipal extends Component {
                                         <h4>Isabela Clementino Ponciano</h4>
                                         <span>CEO</span>
                                         <div className="social">
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-twitter"></i></a>
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-facebook"></i></a>
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-instagram"></i></a>
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-linkedin"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-twitter"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-facebook"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-instagram"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-linkedin"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -365,10 +392,10 @@ export default class PaginaPrincipal extends Component {
                                         <h4>Milena Furuta Shishito</h4>
                                         <span>CFO</span>
                                         <div className="social">
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-twitter"></i></a>
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-facebook"></i></a>
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-instagram"></i></a>
-                                            <a style={{textDecoration:"none"}} href=""><i className="bi bi-linkedin"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-twitter"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-facebook"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-instagram"></i></a>
+                                            <a style={{ textDecoration: "none" }} href=""><i className="bi bi-linkedin"></i></a>
                                         </div>
                                     </div>
                                 </div>
@@ -425,16 +452,16 @@ export default class PaginaPrincipal extends Component {
                     <div className="container">
                         <h3>TutoHora</h3>
                         <p>Nao perca nenuma novidade! Nos siga nas redes socias abaixo.</p>
-                        
+
                         <div className="copyright">
                             &copy; Copyright <strong><span>Green</span></strong>. All Rights Reserved
                         </div>
                         <div className="credits">
-                            Created by <a style={{textDecoration:"none"}} href="https://bootstrapmade.com/">BootstrapMade</a>
+                            Created by <a style={{ textDecoration: "none" }} href="https://bootstrapmade.com/">BootstrapMade</a>
                         </div>
                     </div>
                 </footer>
-                <a style={{textDecoration:"none"}} href="#" className="back-to-top d-flex align-items-center justify-content-center"><i
+                <a style={{ textDecoration: "none" }} href="#" className="back-to-top d-flex align-items-center justify-content-center"><i
                     className="bi bi-arrow-up-short"></i></a>
                 <script src="../src/assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
                 <script src="../src/assets/vendor/glightbox/js/glightbox.min.js"></script>

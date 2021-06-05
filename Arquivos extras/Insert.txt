@@ -1,15 +1,18 @@
-insert into cliente VALUESinsert into cliente (nome,senha,email,telefone,foto) VALUES 
-("Anna","1223","Ana@gmail.com","(24)99999999","https://i.pinimg.com/736x/00/79/ce/0079ce9477bd5d5a608895242029d202.jpg"),
-("Maria","999999999","Maria@gmail.com","(19)333333333","https://i.pinimg.com/474x/57/0d/06/570d062a296f87305b80ace83cc7b271.jpg"),
-("Sofia","22222222","Sofia@gmail.com","(19)666666666","https://i.pinimg.com/474x/a4/4a/6d/a44a6dcb281f73a187d68f42d09a0c96.jpg");
+INSERT INTO `cliente` (`id`, `nome`, `senha`, `email`, `telefone`, `foto`) VALUES
+(1, 'Kena', 'Kena', 'Kena@gmail.com', '(24)99999999', 'https://64.media.tumblr.com/cdab5433153220b8b2aa697675a8121b/ff5db99a4d9187c3-92/s640x960/499b7278e3bf19a2f9904942f72a4165ac243e5c.png'),
+(2, 'Mary', 'Mary', 'Mary@gmail.com', '(19)333333333', 'https://i.pinimg.com/originals/77/93/4c/77934cac2751ed690310a3e8c4aac691.png'),
+(3, 'Francis', 'Francis', 'Francis@gmail.com', '(19)666666666', 'https://64.media.tumblr.com/1801efba50dc30d4429e42249c3aaadb/tumblr_pd7r1o7Ad41xzj0glo5_400.jpg'),
+(4, 'Bash', 'Bash', 'Bash@gmail.com', '(23)111111111', 'https://64.media.tumblr.com/9553593dc7d29a38a5c90e0cdad05a5a/d4b7ae5e84176d55-fc/s400x600/be412da9b2ccdafec3071471c55ac46846d4b616.jpg'),
+(5, 'Lola', 'Lola', 'Lola@gmail.com', '(12)222222222', 'https://64.media.tumblr.com/9e61d08034d5acfb51a2d50be812f27a/tumblr_ooxqqgOnCT1vkkzjko1_250.png'),
+(6, 'Greer', 'Greer', 'Greer@gmail.com', '(14)444444444', 'https://pbs.twimg.com/media/EYFswNxX0AANwgW.jpg');
 
 ************************************************************************
 
-insert into professor (nomeProf,idade,formação,descricao_metodologia,foto,senha,email,telefone) VALUES
-("João",36,"USP","Minha didática é muito boa","https://i.pinimg.com/736x/00/79/ce/0079ce9477bd5d5a608895242029d202.jpg","1223","Joao@gmail.com","(24)99999999"),
-("Rogeria",44,"UNICAMP","Minha didatica é exepcional","https://i.pinimg.com/474x/57/0d/06/570d062a296f87305b80ace83cc7b271.jpg"	,"999999999","	Rogeria@gmail.com","(19)333333333"),
-("Vitor",22,"2 ano de Pedagogia na Unicamp","Uso apostilas da instituição X","https://i.pinimg.com/474x/a4/4a/6d/a44a6dcb281f73a187d68f42d09a0c96.jpg","22222222","Vitor@gmail.com","(19)666666666"),
-("Lara",33,"Historia - Unesp","	Meus alunos me amam na escola kkkkk","https://i.pinimg.com/474x/a4/4a/6d/a44a6dcb281f73a187d68f42d09a0c96.jpg","22222222","Lara@gmail.com","(19)666666667")
+INSERT INTO `professor` (`id`, `nomeProf`, `idade`, `formação`, `descricao_metodologia`, `foto`, `senha`, `email`, `telefone`) VALUES
+(1, 'João', 36, 'USP', 'Minha didática é muito boa', 'https://i.pinimg.com/736x/00/79/ce/0079ce9477bd5d5a608895242029d202.jpg', '1223', 'Joao@gmail.com', '(24)99999999'),
+(2, 'Rogeria', 44, 'UNICAMP', 'Minha didatica é exepcional', 'https://i.pinimg.com/474x/57/0d/06/570d062a296f87305b80ace83cc7b271.jpg', '999999999', '	Rogeria@gmail.com', '(19)333333333'),
+(3, 'Vitor', 22, '2 ano de Pedagogia na Unicamp', 'Uso apostilas da instituição X', 'https://i.pinimg.com/474x/a4/4a/6d/a44a6dcb281f73a187d68f42d09a0c96.jpg', '22222222', 'Vitor@gmail.com', '(19)666666666'),
+(4, 'Lara', 33, 'Historia - Unesp', '	Meus alunos me amam na escola kkkkk', 'https://pbs.twimg.com/profile_images/1267451041781612544/eH2E3rDO_400x400.jpg', '22222222', 'Lara@gmail.com', '(19)666666667');
 
 ************************************************************************
 insert into materia (nomeMat) VALUES

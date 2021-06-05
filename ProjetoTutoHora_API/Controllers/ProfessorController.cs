@@ -23,5 +23,26 @@ namespace ProjetoTutoHora_API.Controllers
         public ActionResult<List<Professor>> GetAll() {
             return _context.Professor.ToList();
         }
+        [HttpGet ("{ProfessorEmail}")]
+        public ActionResult<List<Professor>> GetEmail(string ProfessorEmail) 
+        {
+            try
+            {
+                var result = _context.Professor.Find(ProfessorEmail);
+                //console.log(ProfessorEmail);
+                if (result == null)
+                {
+                    return NotFound();
+                }
+                
+                return Ok(result);
+            }
+            catch
+            {
+                return this.StatusCode(StatusCodes.Status500InternalServerError, "[ERROR] Falha no acesso ao banco de dados.");
+            }
+        }
+
     }
+    
 }

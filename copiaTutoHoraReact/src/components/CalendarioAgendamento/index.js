@@ -11,9 +11,9 @@ export default class CalendarioAgendamento extends Component {
                 <h6 className="agenda-h6">AGENDAMENTO DE HORÁRIOS</h6><h3 className="agenda-h3"> Rodrigo Barulhento</h3><br />
                 <table className="agenda-table-cabecalho">
                     <tr>
-                        <td className="td-anterior"><h2><a ><span className="agenda-btn-anterior">&#60</span></a></h2></td>
+                        <td className="td-anterior"><h2><a ><span className="agenda-btn-anterior"><i class="fas fa-angle-left"></i></span></a></h2></td>
                         <td className="td-nome"><h2 className="agenda-data-semana">Nome do mes</h2></td>
-                        <td className="td-proximo"><h2><a ><span className="agenda-btn-proximo">&gt</span></a></h2></td>
+                        <td className="td-proximo"><h2><a><span className="agenda-btn-proximo"><i class="fas fa-angle-right"></i></span></a></h2></td>
                     </tr>
                 </table>
                 <table>

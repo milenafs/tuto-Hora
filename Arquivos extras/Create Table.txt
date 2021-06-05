@@ -1,7 +1,7 @@
 create table Cliente(
-    idCliente int not null PRIMARY KEY AUTO_INCREMENT,
+    id int not null,
     nome varchar(70) not null,
-    senha varchar(10) not null,
+    senha varchar(10) not null PRIMARY KEY,
     email varchar(150) not null,
     telefone varchar(15)not null,
     foto varchar(400) null
@@ -10,14 +10,14 @@ create table Cliente(
 
 CREATE table Professor
 (
-	idProf int not null PRIMARY KEY AUTO_INCREMENT,
+    id int not null,
     nomeProf varchar(70) not null,	
     idade	int not null	,
     formação varchar(150) not null,
     descricao_metodologia varchar(350) not null	,
     foto varchar(400) null	,
     senha varchar(10) not null	,
-    email varchar(150) not null	,
+    email varchar(150) not null PRIMARY KEY,
     telefone varchar(15) not null	
 	 					
 )
@@ -25,41 +25,41 @@ CREATE table Professor
 
 CREATE table Materia
 (
-    idMateria int not null PRIMARY KEY AUTO_INCREMENT, 
+    id int not null PRIMARY KEY AUTO_INCREMENT, 
     nomeMat varchar(30) not null
 )
 *****************************************************************
 
 create table ProfMateria
 (
-    idProfMateria int not null PRIMARY KEY AUTO_INCREMENT,
+    id int not null PRIMARY KEY AUTO_INCREMENT,
     idProf int not null,
     idMateria int not null 
 )
 
-ALTER TABLE `ProfMateria` ADD CONSTRAINT `fk_profMateria_prof` FOREIGN KEY ( `idProf` ) REFERENCES `professor` ( `idProf` );
-ALTER TABLE `ProfMateria` ADD CONSTRAINT `fk_profMateria_materia` FOREIGN KEY ( `idMateria` ) REFERENCES `MATERIA` ( `idMateria` );
+ALTER TABLE `ProfMateria` ADD CONSTRAINT `fk_profMateria_prof` FOREIGN KEY ( `idProf` ) REFERENCES `professor` ( `id` );
+ALTER TABLE `ProfMateria` ADD CONSTRAINT `fk_profMateria_materia` FOREIGN KEY ( `idMateria` ) REFERENCES `MATERIA` ( `id` );
 *****************************************************************
 
 create table ProfHorario				
 (
-    idProfHorario int not null PRIMARY key AUTO_INCREMENT,
+    id int not null PRIMARY key AUTO_INCREMENT,
     idProf int not null,
     diaSemana tinyint not null	,
     horarioInicio time not null,
     horarioFinal time not null
 )
-ALTER TABLE `ProfHorario` ADD CONSTRAINT `fk_profHorario` FOREIGN KEY ( `idProf` ) REFERENCES `professor` ( `idProf` );
+ALTER TABLE `ProfHorario` ADD CONSTRAINT `fk_profHorario` FOREIGN KEY ( `idProf` ) REFERENCES `professor` ( `id` );
 *****************************************************************
 
 create table ClienteProfHorario					
 (
-idClienteProfHorario	int not null PRIMARY key AUTO_INCREMENT,
+id	int not null PRIMARY key AUTO_INCREMENT,
 idCliente	int not null,
 idProfHorario	int not null,
 dataAula	date not null,
 link	varchar(100) not null,
 descrição varchar(400) not null
 )
-ALTER TABLE `ClienteProfHorario	` ADD CONSTRAINT `fk_ClienteProfHorario_cliente` FOREIGN KEY ( `idCliente` ) REFERENCES `cliente` ( `idCliente` );	
-ALTER TABLE `ClienteProfHorario	` ADD CONSTRAINT `fk_ClienteProfHorario_profHorario` FOREIGN KEY ( `idProfHorario` ) REFERENCES `ProfMateria` ( `idProfMateria` );	
+ALTER TABLE `ClienteProfHorario	` ADD CONSTRAINT `fk_ClienteProfHorario_cliente` FOREIGN KEY ( `idCliente` ) REFERENCES `cliente` ( `id` );	
+ALTER TABLE `ClienteProfHorario	` ADD CONSTRAINT `fk_ClienteProfHorario_profHorario` FOREIGN KEY ( `idProfHorario` ) REFERENCES `ProfMateria` ( `id` );	

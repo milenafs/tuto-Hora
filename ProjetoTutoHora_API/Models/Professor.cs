@@ -1,10 +1,12 @@
+using System.ComponentModel.DataAnnotations;
 namespace ProjetoTutoHora_API.Models
 {
     public class Professor
     {
-        public int Id { get; set; }
+        // public int Id { get; set; }
+      
         public string nomeProf { get; set; }
-        public string email { get; set; }
+          [Key] public string email { get; set; }
         public string senha { get; set; }
         public string telefone { get; set; }
         public string foto { get; set; }

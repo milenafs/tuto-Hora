@@ -4,6 +4,28 @@ import fotoPerfil from "../../assets/img/perfil.png";
 import Menu from '../MenuAluno';
 
 export default class HomeAluno extends Component {
+    
+    mudarFoto()
+    {
+        var srcFoto = document.querySelector("#fotoUser");
+        var urlFoto = document.querySelector("#urlFoto");
+        var novoSrc = urlFoto.value;
+        srcFoto.setAttribute('src', novoSrc);
+        urlFoto.value = '';
+    }
+    mostrarSenha(event)
+    {
+        var senha =  document.querySelector('#senha');  
+        if(senha.type === 'text')
+        {
+            senha.setAttribute('type', 'password');
+        }
+        else
+        {
+            senha.setAttribute('type', 'text');
+        }
+        
+    }
     render() {
         return (
             <div id="corpo">
@@ -22,8 +44,13 @@ export default class HomeAluno extends Component {
                                     </div>
                                     <div className="row">
                                         <div className="form-group col-md-6">
-                                            <label>Senha:</label>
-                                            <input type="text" name="senha" className="form-control" id="senha" required />
+                                            <label>Senha:</label> 
+                                            <img id="olho" height="20px" width="20px"
+                                                src="https://image.flaticon.com/icons/png/512/37/37090.png" 
+                                                onClick={event => this.mostrarSenha(event)}
+                                            >
+                                            </img>
+                                            <input type="password" maxLength="10" name="senha" className="form-control" id="senha" required />
                                         </div>
                                         <div className="form-group col-md-6 mt-3 mt-md-0">
                                             <label>Email: </label>
@@ -34,16 +61,6 @@ export default class HomeAluno extends Component {
                                         <label>Telefone:</label>
                                         <input type="tel" name="tel" className="form-control" id="tel" required />
                                     </div>
-                                    {/*
-                                            <div class="form-group mt-3">
-                                                <label for="name">Subject</label>
-                                                <input type="text" className="form-control" name="subject" id="subject" required />
-                                            </div>
-                                            <div class="form-group mt-3">
-                                                <label for="name">Message</label>
-                                                <textarea class="form-control" name="message" rows="10" required></textarea>
-                                            </div>
-                                        */}
                                     <div className="my-3">
                                         <div className="loading">Carregando.</div>
                                         <div className="error-message"></div>
@@ -60,7 +77,7 @@ export default class HomeAluno extends Component {
                                     <div className="form-group mt-3">
                                         <img id="fotoUser" alt="" src={fotoPerfil} />
                                     </div>
-                                    <div className="text-center" ><button id="btnVerImg" type="submit"> Visualizar </button></div>
+                                    <div className="text-center" ><button id="btnVerImg" type="submit" onClick={event => this.mudarFoto(event)}> Visualizar </button></div>
                                 </div>
                             </div>
                             <div className="mx-auto">

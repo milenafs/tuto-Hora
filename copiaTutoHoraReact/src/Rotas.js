@@ -15,6 +15,8 @@ import HorarioProf from './components/CalendarioGeralProf';
 import PaginaPrincipal from './components/PaginaPrincipal';
 import Login from './components/Login';
 import CriarConta from './components/CriarConta';
+//teste api
+import TesteAPI from './components/TesteAPI/TesteAPI';
 
 export default class Rotas extends Component {
     render() {
@@ -29,6 +31,7 @@ export default class Rotas extends Component {
                 <Route path="/horarioProf" component={HorarioProf} />
                 <Route path="/professores" component={Professores} />
                 <Route path="/agendamento" component={Agendamento} />
+                <Route path="/teste" component={TesteAPI} />
                 <Redirect from='*' to='/' />
             </Switch>
         )

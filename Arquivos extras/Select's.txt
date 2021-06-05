@@ -29,7 +29,7 @@ cph.idProfHorario = ph.id AND
 ph.idProf = p.id
 **************************************************
 Calendário Aulas Professores:
-select c.nome, p.nomeProf, cph.dataAula, cph.link, cph.descrição, ph.horarioInicio, ph.horarioFinal from 
+select c.nome, cph.dataAula, cph.link, cph.descrição, ph.horarioInicio, ph.horarioFinal from 
 Cliente c,
 professor p,
 clienteprofhorario cph,

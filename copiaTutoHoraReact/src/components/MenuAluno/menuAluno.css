@@ -1,16 +1,5 @@
-/*
-Parte de aluno e menu ao lado
-#000000  - preto
-#818AE7 - azul escuro
-#D4DBFE - azul mais claro
-#EF7F59 - laranjinha
-#FBBE63 - amarelinho
-*/
 body, #bodyMenuAluno {
     font-family: "Lato", sans-serif;
-    /*background-image: url(https://i.pinimg.com/originals/a5/43/21/a54321b862c07dd25971d7782c0e547c.jpg);
-    background-repeat: no-repeat;
-    background-size: cover;*/
     background-color: #fbfbfa ;
   }
   
@@ -131,55 +120,3 @@ body, #bodyMenuAluno {
 .scrolled-offset {
   margin-top: 70px;
 }
-/**********************************************/
-/*Home
-
-*/
-table, th, td {
-  
-/*border: 0.5px solid #FBBE63 ;*/
-  font-size: 20px;
-  margin-top: 50px;
-  margin-left: 40px;
-  width: 1300px;
-}
-.inputHome
-{
-  width: 400px;
-  height:30px;
-  font-size: medium;
-  font-family: "Lato", sans-serif;
-}
-.btnHome
-{
-  font-size: 100%;
-  border-radius: 5rem;
-  letter-spacing: .1rem;
-  font-weight: bold;
-  padding: 5px;
-  width: 60%;
-  margin-left: 20%;
-  transition: all 0.2s;
-  background-color: #818AE7;
-  border:#818AE7;
-  margin-top: 60px;
-}
-.btnFotoHome{
-  font-size: 60%;
-  border-radius: 5rem;
-  letter-spacing: .1rem;
-  padding: 5px;
-  width: 30%;
-  margin-left: 30%;
-  transition: all 0.2s;
-  background-color: #818AE7;
-  border:#818AE7;
- 
-}
-/*#fotoUser
-{
-  border-radius: 100%;
-  height: 200px;
-  width: 200px;
-  margin-left: 200px;
-}*/
