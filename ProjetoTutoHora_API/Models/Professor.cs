@@ -3,7 +3,7 @@ namespace ProjetoTutoHora_API.Models
 {
     public class Professor
     {
-        // public int Id { get; set; }
+         public int Id { get; set; }
       
         public string nomeProf { get; set; }
           [Key] public string email { get; set; }

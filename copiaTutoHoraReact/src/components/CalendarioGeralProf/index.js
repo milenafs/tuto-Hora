@@ -1,12 +1,38 @@
-import React, { Component } from 'react';
-import MenuProf from '../MenuProf';
+import React, { Component, useState } from 'react';
 import "./styleCalendarioGeralProf.css";
+import 'react-calendar/dist/Calendar.css';
+import Calendar from 'react-calendar';
+import MenuProf from '../MenuProf';
 
 export default class CalendarioGeralProfessor extends Component {
-    render(){
-        return(<div id="bodyAulaProf">
-            <MenuProf></MenuProf>
-            <h1>CalendarioGeralProfessor</h1>
-        </div>);
+    constructor() {
+        super();
+        this.state = {
+
+        };
+    }
+
+    mostarDados(data) {
+        console.log(data);
+        // FAZER SELECT DOS COMPROMISSOS DESTA DATA E COLOCAR NO STATE
+    }
+
+    render() {
+        return (
+            <div id="bodyAulasAluno" style={{ background: "white;" }}>
+                <MenuProf></MenuProf>
+                <br></br><br></br>
+                <div className="section-title">
+                    <h2>Seu Calendário</h2>
+                </div>
+                <div id="div-calendario">
+                    <Calendar id="calendario" onClickDay={data => this.mostarDados(data)} />
+                </div>
+                <div id="div-compromissos">
+                    <h1 id="h1-compromissos" style={{ margin: "10px" }}>Compromissos</h1>
+                    {/*fazer map dos compromissos do state do dia aqui com um buton compromisso*/}
+                    <button className="compromissos">Aula de física</button>
+                </div>
+            </div>);
     }
 }

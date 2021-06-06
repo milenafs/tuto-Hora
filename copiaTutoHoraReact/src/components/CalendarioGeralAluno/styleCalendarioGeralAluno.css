@@ -1,9 +1,123 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/fullcalendar/3.1.0/fullcalendar.min.css");
 @import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css");
-@import url("../CalendarioAgendamento/styleCalendarioAgendamento.css");
 
-#bodyAulasAluno
-{
-    height: 630px;
+:root{
+    --azulescuro: #818AE7;
+    --azulclaro:#D4DBFE;
+    --laranja:#EF7F59;
+    --amarelo:#ffd089 ;
+}
+
+#bodyAulasAluno{
+    height: 1000px;
+    background-color:white;
+}
+
+.mes-container{
+    width: 80%;
+    margin: auto;
+}
+
+.fc-state-active{
+    background-color:var(--azulclaro);
+}
+
+.fc-day-grid-event{
+    background-color:#8189e79f;
+    border: none;
+}
+.fc-day-number{
+    color: var(--azulescuro);
+}
+.fc-unthemed td.fc-today{
+    background-color: #eef1fd;
+}
+
+
+
+.agenda-btn{
+     background-color:#d4dbfeb2 ;
+     color: #818AE7;
+     padding: 10px;
+     font-size: 10px;
+     font-weight: 700;
+     letter-spacing: 1px;
+    border-radius: 20px;
+    width: 100px;
+     transition: .5s ease;
+ }
+ .agenda-btn:hover{
+    box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.096);
+    letter-spacing: 3px;
+ }
+ .agenda-btn:active{
+     background-color: #c6cefa;
+ }
+
+ .fc-toolbar, .fc-header-toolbar{
+     overflow: hidden;
+     height: 0;
+ }
+
+ /********************************/
+.react-calendar {
+    /*max-width: 100%;*/
+    background: white;
+    border: 1px solid white;
+    font-family: Arial, Helvetica, sans-serif;
+    line-height: 1.125em;
+    padding: 10px;
+}
+abbr{
+    color: #818AE7;
+    
+}
+.react-calendar__tile--now:enabled:hover, .react-calendar__tile--now:enabled:focus {
+    background: #c6cefa;
+}
+
+.react-calendar__navigation__label__labelText--from{
+    font-size: 17px;
+    font-weight: 100;
+    letter-spacing: 5px;
+}
+/**************************************/
+#div-calendario{
+    width: 40%;
+    float: left;
+    margin-left: 5%;
+    margin-top: 0;
+    box-shadow:1px 10px 20px#a8b1e085;
+    /*border: 0.1px solid #a8b1e062;*/
+    
+}
+#div-compromissos{
+    width: 45%;
+    margin: 5%;
+    margin-top: 0;
+    float: right;
+    text-align: center;
+    border: 0.3px solid #c6cefa;
+    padding: 10px;
+    border-radius: 10px;
     background-color: rgb(255, 255, 255);
+}
+#h1-compromissos{
+    font-size: 15px;
+    font-weight: 500;
+    letter-spacing: 5px;
+}
+.compromissos{
+    width: 100%;
+    /*margin: 10px;*/
+    background-color: #c6cefab2;
+    height: 30px;
+    text-align: center;
+    border: 0.3px solid #c6cefa;
+    padding: 5px;
+    transition: 0.5s ease;
+}
+.compromissos:hover{
+    background-color: #a2b0ff;
+    box-shadow:1px 10px 10px#a8b1e062;
 }

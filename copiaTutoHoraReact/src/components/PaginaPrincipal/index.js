@@ -275,77 +275,7 @@ export default class PaginaPrincipal extends Component {
                                                 </div>
                                             </div>
                                         </div>
-                                )}
-                            
-                                {/*<div className="col-lg-4 col-md-6 portfolio-item filter-web">
-                                    <div className="portfolio-wrap">
-                                        <img src={prof2} className="img-fluid" alt="" height="300px" width="400px" />
-                                        <div className="portfolio-info">
-                                            <h4>Aria Neto</h4>
-                                            <p>Formado em Pedagogia</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-                                    <div className="portfolio-wrap">
-                                        <img src={prof3} className="img-fluid" alt="" height="300px" width="400px" />
-                                        <div className="portfolio-info">
-                                            <h4>Sônia Alves Mendes</h4>
-                                            <p>Formada em Biomedicina e Farmácia na Unicamp</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-                                    <div className="portfolio-wrap">
-                                        <img src={prof4} className="img-fluid" alt="" height="300px" width="400px" />
-                                        <div className="portfolio-info">
-                                            <h4>Carlos Darwin Melo</h4>
-                                            <p>Dortor em Física Quântica pela Universidade de Boston</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item filter-web">
-                                    <div className="portfolio-wrap">
-                                        <img src={prof5} className="img-fluid" alt="" height="300px" width="400px" />
-                                        <div className="portfolio-info">
-                                            <h4>Ísis Skazok Verdano</h4>
-                                            <p>Formada em História e Doutorada em História do Brasil </p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item filter-app">
-                                    <div className="portfolio-wrap">
-                                        <img src={prof6} className="img-fluid" alt="" height="300px" width="400px" />
-                                        <div className="portfolio-info">
-                                            <h4>Lana Nakayama</h4>
-                                            <p>Formada em Letras pela Unicamp</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-                                    <div className="portfolio-wrap">
-                                        <img src={prof7} className="img-fluid" alt="" height="300px" width="400px" />
-                                        <div className="portfolio-info">
-                                            <h4>Amélia Sivan Bief</h4>
-                                            <p>Formada em Agrônomia Sustentável</p>
-                                        </div>
-                                    </div>
-                                </div>
-
-                                <div className="col-lg-4 col-md-6 portfolio-item filter-card">
-                                    <div className="portfolio-wrap">
-                                        <img src={prof8} className="img-fluid" alt="" height="300px" width="400px" />
-                                        <div className="portfolio-info">
-                                            <h4>Carolinne Cross Park</h4>
-                                            <p>Formada em Ciências Humanas na Usp</p>
-                                        </div>
-                                    </div>
-                                </div>*/}
+                                )}                       
                             </div>
                         </div>
                     </section>

@@ -2,27 +2,9 @@
 @import url("https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.2.7/semantic.min.css");
 
 #bodyAgendamento{
-    height: 630px;
+    height: 1000px;
     background-color: rgb(255, 255, 255);
 }
-a:link{
-    text-decoration: none;
-    color: inherit;
-}
-a:visited {
-    color: inherit;
-}
-a:hover {
-    color: inherit;
-}
-a:active {
-    color: inherit;
-}
-.agenda-container{
-    width: 80%;
-    margin: auto;
-}
-
 .agenda-img{
     border-radius: 60px;
     height: 90px;
@@ -31,6 +13,11 @@ a:active {
     margin: 25px;
     margin-left: 2%;
     box-shadow: 1px 3px 20px rgba(0, 0, 0, 0.151);
+}
+.agenda-img:hover{
+    width: 100px;
+    height: 100px;
+    box-shadow: 1px 3px 30px rgba(112, 112, 112, 0.555);
 }
 .agenda-h6{
     font-size: 12px;
@@ -46,117 +33,84 @@ a:active {
     margin-top: -3px;
     /*float: left;*/
 }
-.agenda-btn-anterior, .agenda-btn-proximo{
-    /*float: right;*/
-    /*position: absolute;*/
-    background-color: #d4dbfe94;
-    color: #818AE7;
-   /* margin: 10px;
-    margin-top: 32px;*/
-    padding: 10px;
-    padding-left: 20px;
-    padding-right: 20px;
-    border-radius: 100px;
-    font-size: 30px;
-    transition: .5s ease;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
+a:link{
+    text-decoration: none;
+    color: inherit;
 }
-.agenda-btn-anterior:hover, .agenda-btn-proximo:hover{
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.151);
-    background-color: #D4DBFE;
+a:visited {
+    color: inherit;
 }
-.agenda-data-semana{
-    /*float: right;*/
-    background-color: #d4dbfe8a;
-    color: #818AE7;
-    /*margin-right: 2%;*/
-    margin-bottom: 10px;
-    padding: 11px;
-    border-radius: 50px;
-    box-shadow: 1px 5px 20px rgba(0, 0, 0, 0.021);
+a:hover {
+    color: inherit;
 }
-.agenda-table-cabecalho td{
-    border: 1px solid rgba(0, 0, 0, 0);
+a:active {
+    color: inherit;
 }
-.td-anterior, .td-proximo{
-    width: 40px;
-    padding: 0;
-    /*float: right;*/
-} 
-
-table{
-    width: 96%;
-    margin: auto;
-}
-td, th{
-    border-left: 5px solid rgb(255, 255, 255);
-    padding: 7px;
-    text-align: center;
-}
-th{
-    border-bottom: 1px solid #8189e748;
-    font-size: 15px;
-    font-weight: bold;
-    font-weight: 600;
-}
-.td-horario{
-    font-size: 15px;
-    width: 150px;
-    border-bottom: 1px solid #8189e748;
-}
-
 .td-horario-indisponivel{
     font-size: 13px;
     font-weight: bold;
     font-weight: 700;
     letter-spacing: 2px;
-    color: rgba(255, 0, 0, 0.514);
-    background-color: rgba(255, 0, 0, 0.089);
-    width: 12.5%;
+    color: rgba(255, 255, 255, 0);
+    background-color: hsla(0, 100%, 50%, 0.089);
     transition: .10s ease;
+    text-align: center;
+    width: 70%;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
+}
+.td-horario-disponivel{
+    color: rgb(2, 90, 2);
+    background-color: rgba(126, 252, 0, 0.329);
+    transition: 0.5s ease;
+    border-top-right-radius: 5px;
+    border-bottom-right-radius: 5px;
 }
 .td-horario-indisponivel:hover{
-    background-color: rgba(255, 0, 0, 0.13);
-}
-.td-horario-indisponivel:hover .horario-status{
+    color: rgba(255, 0, 0, 0.514);
+    background-color: rgba(255, 0, 0, 0.288);
     opacity: 1;
-}
-.td-horario-indisponivel .horario-status{
-    font-weight: 700;
-    position: absolute;
-    opacity: 0;
-    transition: .5s ease;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-.td-horario-disponivel{/**/
-    font-size: 15px;
-    font-weight: bold;
-    font-weight: 700;
-    letter-spacing: 2px;
-    background-color:rgba(126, 252, 0, 0.486);
-    transition: .100s ease;
-}
-.td-horario-disponivel .horario-status{
-    color: rgb(91, 182, 0);
-    font-size: 15px;
-    font-weight: bold;
-    font-weight: 700;
-    letter-spacing: 2px;
-    transition: .5s ease;
-    -webkit-transform: translate(-50%, -50%);
-    -ms-transform: translate(-50%, -50%);
-    transform: translate(-50%, -50%);
-}
-.td-horario-disponivel:hover{
-    background-color: rgba(126, 252, 0, 0.733);
-    box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.151);
-}
-.td-horario-disponivel:hover .horario-status{
     letter-spacing: 4px;
     font-size: 16px;
+}
+.td-horario-disponivel:hover{
     color: black;
+    background-color: rgba(126, 252, 0, 0.733);
+    letter-spacing: 4px;
+    font-size: 16px;
+}
+.td-horario-disponivel, .td-horario-indisponivel{
+    border: inherit;
+    width: 70%;
+    transition: all .10s ease-in-out;
+}
+
+.card-horario{
+    background-color: #d4dbfe6c;
+    text-align: center;
+    margin: 10px;
+    border-radius: 5px;
+    transition: 0.5s ease;
+    display: flex;
+    flex-wrap: wrap;
+}
+.card-horario:hover{
+    box-shadow: 1px 5px 20px #4d4d4d1a ;
+}
+.card-hora{
+    padding: 10px;
+    width: 30%;
+}
+#div-calendario-agendamento{
+    width: 35%;
+    margin-top: 0;
+    margin-left: 55%;
+    float: right;
+    position: fixed;
+}
+.agendamento-container{
+    width: 40%;
+    margin: 5%;
+    margin-top: -5%;
+    float: left;
 }
