@@ -1,5 +1,7 @@
 # tuto-Hora⏰
 Projeto de Práticas Profissionais II
+- Backend: [.Net Core](https://github.com/milenafs/tuto-Hora/tree/master/ProjetoTutoHora_API)
+- Frontend: [React](https://github.com/milenafs/tuto-Hora/tree/master/copiaTutoHoraReact)
 
 ### Objetivo🚩
 Programa para contratação de professores e tutoriais, em que os alunos poderão contratar tutores para auxiliar nas suas dificuldades escolares. O nosso site possuíra uma aba de login/cadastro, uma aba de listagem de todos os profissionais, contratação de profs disponíveis num formato do cronograma dos profs, história de ideia e página exclusiva para os profs visualizarem suas aulas e alunos.
